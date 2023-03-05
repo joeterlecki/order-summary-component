@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --secondary-very-pale-blue: hsl(225, 100%, 98%);
+  --secondary-desaturated-blue: hsl(224, 23%, 55%);
+  --secondary-dark-blue: hsl(223, 47%, 23%);
+  --primary-font-family: "Red Hat Display", sans-serif;
+  --global-font-size: 16px;
+  --font-weight-light: 500;
+  --font-weight-medium: 700;
+  --font-weight-bold: 900;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--global-font-size);
+  font-family: var(--primary-font-family);
+  font-weight: var(--font-weight-bold);
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: var(--global-font-size);
+  font-weight: 900;
+}
+
+.container {
+  background-color: var(--primary-pale-blue);
+  /* background-image: url("./starter/images/pattern-background-desktop.svg") */
+  max-width: 1440px;
+  min-height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  width: 450px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-header {
+  width: 100%;
+}
+
+.card-body {
+  padding: 2.5rem 3rem;
+}
+
+.order-heading {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.order-pitch {
+  color: var(--secondary-desaturated-blue);
+  font-weight: 500;
+  line-height: 1.8rem;
+  margin: 0 20px;
+  margin-bottom: 1.5rem;
+}
+
+.order-plan {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  background-color: var(--secondary-very-pale-blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.current-plan {
+  justify-self: start;
+}
+
+.change-plan {
+  margin-left: auto;
+}
+
+.payment-btn {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-family: var(--primary-font-family);
+  font-weight: 900;
+  background-color: var(--primary-bright-blue);
+  color: #fff;
+}
+
+.cancel-order {
+}
+
+/* @media only screen and (max-width: 450px) {
+} */
