@@ -36,9 +36,10 @@ h2 {
 
 .container {
   background-color: var(--primary-pale-blue);
-  /* background-image: url("./starter/images/pattern-background-desktop.svg") */
-  max-width: 1440px;
-  min-height: 900px;
+  background-image: url("./starter/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +51,7 @@ h2 {
   border-radius: 1rem;
   overflow: hidden;
   background-color: #fff;
+  box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, 0.11);
 }
 
 .card-header {
@@ -70,7 +72,7 @@ h2 {
   color: var(--secondary-desaturated-blue);
   font-weight: 500;
   line-height: 1.8rem;
-  margin: 0 20px;
+  /* margin: 0 20px; */
   margin-bottom: 1.5rem;
 }
 
@@ -85,12 +87,26 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.music-icon {
+  margin-right: 1.25rem;
+}
+
 .current-plan {
   justify-self: start;
 }
 
+.plan-heading {
+  margin-bottom: 0.3rem;
+}
+
+.order-plan-price {
+  font-weight: var(--font-weight-light);
+  color: var(--secondary-desaturated-blue);
+}
+
 .change-plan {
   margin-left: auto;
+  text-decoration: underline;
 }
 
 .payment-btn {
@@ -103,10 +119,56 @@ h2 {
   font-weight: 900;
   background-color: var(--primary-bright-blue);
   color: #fff;
+  box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, 0.25);
 }
 
-.cancel-order {
+.payment-btn:active,
+.payment-btn:hover,
+.change-plan:hover,
+.change-plan:active {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
-/* @media only screen and (max-width: 450px) {
-} */
+.cancel-order:hover,
+.cancel-order:active {
+  color: var(--secondary-dark-blue);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    background-image: url("./starter/images/pattern-background-mobile.svg");
+  }
+
+  .card {
+    width: 325px;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .order-heading {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .order-pitch {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .order-plan {
+    padding: 0.9rem;
+  }
+
+  .order-plan p,
+  .order-plan h2 {
+    font-size: 0.85rem;
+  }
+
+  .change-plan {
+    font-size: 0.9rem;
+  }
+}
