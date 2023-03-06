@@ -107,6 +107,7 @@ h2 {
 .change-plan {
   margin-left: auto;
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .payment-btn {
